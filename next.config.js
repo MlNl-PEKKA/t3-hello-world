@@ -13,15 +13,6 @@ const config = {
    *
    * @see https://github.com/vercel/next.js/issues/41980
    */
-  redirects: async () => {
-    return [
-      {
-        source: "/",
-        destination: "/home", // Matched parameters can be used in the destination
-        permanent: true,
-      },
-    ];
-  },
 
   i18n: {
     locales: ["en"],
