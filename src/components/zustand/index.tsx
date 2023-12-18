@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useHomeStore } from "~/zustandStore";
 
 const ZustandComponent = () => {
