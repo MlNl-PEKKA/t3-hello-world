@@ -1,6 +1,6 @@
 import Head from "next/head";
 import HomeComponent from "~/components/home";
-import { HomeContextProvider } from "~/contexts/homeContext";
+import { HomeContextProvider } from "~/context/homeContext";
 import DefaultLayout from "~/layout";
 
 const Home = () => {

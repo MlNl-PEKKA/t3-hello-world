@@ -1,4 +1,4 @@
-import { useHomeContext } from "~/contexts/homeContext";
+import { useHomeContext } from "~/context/homeContext";
 
 const HomeComponent = () => {
   return (
