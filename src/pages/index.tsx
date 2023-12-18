@@ -1,7 +1,9 @@
 import Head from "next/head";
 import HomeComponent from "~/components/home";
+import { HomeContextProvider } from "~/contexts/homeContext";
+import DefaultLayout from "~/layout";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -12,4 +14,14 @@ export default function Home() {
       <HomeComponent />
     </>
   );
-}
+};
+
+Home.getLayout = function getLayout(page: JSX.Element) {
+  return (
+    <HomeContextProvider>
+      <DefaultLayout>{page}</DefaultLayout>
+    </HomeContextProvider>
+  );
+};
+
+export default Home;
