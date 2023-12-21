@@ -17,7 +17,7 @@ export const postRouter = createTRPCRouter({
       // simulate a slow db call
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      return ctx.db.post.create({
+      return await ctx.db.post.create({
         data: {
           name: input.name,
         },
@@ -28,5 +28,9 @@ export const postRouter = createTRPCRouter({
     return ctx.db.post.findFirst({
       orderBy: { createdAt: "desc" },
     });
+  }),
+
+  getPosts: publicProcedure.query(({ ctx }) => {
+    return ctx.db.post.findMany({ orderBy: { createdAt: "desc" } });
   }),
 });
