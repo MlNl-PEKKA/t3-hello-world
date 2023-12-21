@@ -1,4 +1,4 @@
-import { useHomeStore } from "~/zustandStore";
+import { useDeepObj, useFormVal1 } from "~/zustandStore";
 
 const ZustandComponent = () => {
   return (
@@ -42,7 +42,7 @@ const Wrapper4 = () => {
 };
 
 const FormWrapper1 = () => {
-  const { setFormVal1 } = useHomeStore();
+  const { setFormVal1 } = useFormVal1();
   return (
     <section className="p-10">
       <input
@@ -55,7 +55,7 @@ const FormWrapper1 = () => {
 };
 
 const FormWrapper2 = () => {
-  const { setFormObj } = useHomeStore();
+  const { setFormObj } = useDeepObj();
   return (
     <section className="p-10">
       <button onClick={setFormObj}>Switch</button>
@@ -64,11 +64,11 @@ const FormWrapper2 = () => {
 };
 
 const FormWrapper3 = () => {
-  const { formVal1 } = useHomeStore();
+  const { formVal1 } = useFormVal1();
   return <section className="p-10">Form value 1 : {formVal1}</section>;
 };
 
 const FormWrapper4 = () => {
-  const { deepObj } = useHomeStore();
+  const { deepObj } = useDeepObj();
   return <section className="p-10">{JSON.stringify(deepObj)} 🔥</section>;
 };
