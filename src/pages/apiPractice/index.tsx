@@ -1,6 +1,6 @@
+import useForm1 from "~/components/zustand/zustandStore";
 import DefaultLayout from "~/layout";
 import { api } from "~/utils/api";
-import { useForm1 } from "./zustandStore";
 
 const ApiPractice = () => {
   const { data, isLoading, refetch } = api.post.getPosts.useQuery();
