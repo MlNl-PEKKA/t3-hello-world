@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomeComponent from "~/components/context";
+import HomeComponent from "~/components/contextComponents";
 import { HomeContextProvider } from "~/context/homeContext";
 import DefaultLayout from "~/layout";
 

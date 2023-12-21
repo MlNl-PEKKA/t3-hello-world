@@ -4,19 +4,15 @@ import { immer } from "zustand/middleware/immer";
 import { produce } from "immer";
 
 export const useFormVal1 = create(
-  immer(
-    combine({ formVal1: "" }, (set) => ({
-      setFormVal1: (e: string) => set(() => ({ formVal1: e })),
-    })),
-  ),
+  combine({ formVal1: "" }, (set) => ({
+    setFormVal1: (e: string) => set(() => ({ formVal1: e })),
+  })),
 );
 
 export const useFormVal2 = create(
-  immer(
-    combine({ formVal2: "" }, (set) => ({
-      setFormVal2: (e: string) => set(() => ({ formVal2: e })),
-    })),
-  ),
+  combine({ formVal2: "" }, (set) => ({
+    setFormVal2: (e: string) => set(() => ({ formVal2: e })),
+  })),
 );
 
 export const useDeepObj = create(
